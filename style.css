@@ -1,0 +1,66 @@
+html{
+    text-transform: uppercase;
+    background-color: lightgray;
+}
+
+.startContainer{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    column-gap: 20px;
+    height: 50vh;
+    padding-top: 10%;
+}
+
+.values{
+    background-color: aqua;
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+}
+
+.choice{
+    label{
+        display: block;
+        margin: 5px;
+        text-align: center;
+    }
+    input{
+        width: 85%;
+        margin: 5px;
+        align-self: center;
+        display: block;
+        text-align: center;
+    }
+}
+
+.results{
+    background-color: lightblue;
+    width: 45%;
+}
+
+#atisArea{
+    width: 85%;
+    height: 75%;
+    margin-top: 10px;
+    margin-left: 6.5%;
+}
+
+#copyButton{
+    background-color: lightgray;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    height: 10%;
+    width: 25%;
+
+    margin-left: 35%;
+    margin-top: 10px;
+}

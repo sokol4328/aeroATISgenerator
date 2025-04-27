@@ -1,0 +1,146 @@
+var airportCode = "";
+var atisLetter = "A";
+var time = "";
+
+var departureRunway = "";
+var arrivalRunway = "";
+
+var wind = "";
+var visibility = "";
+var cloudLayers = "";
+var temp = "";
+var qnh = "1013";
+
+var transitionLevel = "60";
+
+var textPilotInstructions = "PING FOR EVERY TRANSMISSION";
+var pdcAvailable = "PDC NOT AVAILABLE";
+
+var serverCode = "";
+
+updateAtis();
+
+document.getElementById("airport").addEventListener("input", function () {
+    airportCode = this.value.toUpperCase();
+    this.value = airportCode;
+    updateAtis();
+});
+document.getElementById("atisLetter").addEventListener("input", function () {
+    atisLetter = this.value.toUpperCase();
+    this.value = atisLetter;
+    updateAtis();
+});
+document.getElementById("time").addEventListener("input", function () {
+    time = this.value.toUpperCase();
+    this.value = time; // fixed typo
+    updateAtis();
+});
+document.getElementById("departureRunway").addEventListener("input", function () {
+    departureRunway = this.value.toUpperCase();
+    this.value = departureRunway;
+    updateAtis();
+});
+document.getElementById("arrivalRunway").addEventListener("input", function () {
+    arrivalRunway = this.value.toUpperCase();
+    this.value = arrivalRunway;
+    updateAtis();
+});
+document.getElementById("wind").addEventListener("input", function () {
+    wind = this.value.toUpperCase();
+    this.value = wind;
+    updateAtis();
+});
+document.getElementById("visibility").addEventListener("input", function () {
+    visibility = this.value.toUpperCase();
+    this.value = visibility;
+    updateAtis();
+});
+document.getElementById("cloudLayers").addEventListener("input", function () {
+    cloudLayers = this.value.toUpperCase();
+    this.value = cloudLayers;
+    updateAtis();
+});
+document.getElementById("temp").addEventListener("input", function () {
+    temp = this.value.toUpperCase();
+    this.value = temp;
+    updateAtis();
+});
+document.getElementById("qnh").addEventListener("input", function () {
+    qnh = this.value.toUpperCase();
+    this.value = qnh;
+    updateAtis();
+});
+document.getElementById("tl").addEventListener("input", function () {
+    transitionLevel = this.value.toUpperCase();
+    this.value = transitionLevel;
+    updateAtis();
+});
+document.getElementById("textPilotInstructions").addEventListener("input", function () {
+    textPilotInstructions = this.value.toUpperCase();
+    this.value = textPilotInstructions;
+    updateAtis();
+});
+document.getElementById("pdc").addEventListener("change", function () {
+    if (this.checked) {
+        pdcAvailable = "PDC AVAILABLE";
+        updateAtis();
+    } else {
+        pdcAvailable = "PDC NOT AVAILABLE";
+        updateAtis();
+    }
+
+});
+document.getElementById("serverCode").addEventListener("input", function () {
+    serverCode = this.value.toUpperCase();
+    this.value = serverCode;
+    updateAtis();
+});
+
+function safeString(value) {
+    return value ? String(value) : " ";
+}
+
+function getAirportName(airportCode) {
+    return airportCode;
+}
+
+function updateAtis() {
+    var atis = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " TIME " + safeString(time) + "\n" +
+        "DEP RWY " + safeString(departureRunway) + " ARR RWY " + safeString(arrivalRunway) + " IN USE" + "\n" +
+        safeString(wind) + " " + safeString(visibility) + " " + safeString(cloudLayers) + " " + safeString(temp) + " " + safeString(qnh) + "\n" +
+        "TRANSITION LEVEL " + safeString(transitionLevel) + "\n" +
+        "ACKNOWLEDGE RECEIPT OF INFORMATION " + safeString(atisLetter) + "\n" +
+        "AND ADVISE AFCT TYPE ON FIRST CONTACT WITH " + safeString(airportCode) + "\n" +
+        "TEXT PILOTS " + safeString(textPilotInstructions) + "|" + pdcAvailable + "\n" +
+        "SERVER CODE " + safeString(serverCode);
+
+    // Use .value for a textarea
+    document.getElementById("atisArea").value = atis;
+}
+
+function checkRequiredFields() {
+    // Get all the required fields
+    const requiredFields = document.querySelectorAll(".values [required]");
+    let allFilled = true;
+
+    // Loop through each required field and check if it's filled
+    requiredFields.forEach(function (field) {
+        if (!field.value) {
+            allFilled = false;
+            // Optionally, you can highlight the empty field
+            field.style.borderColor = "red"; // Highlight in red
+        } else {
+            field.style.borderColor = ""; // Reset border color
+        }
+    });
+
+    // Show an alert if any required field is empty
+    if (!allFilled) {
+        alert("Please fill in all required fields.");
+    } else {
+        var atisArea = document.getElementById("atisArea");
+        atisArea.select();
+        document.execCommand("copy");
+        alert("ATIS copied to clipboard!");
+    }
+}
