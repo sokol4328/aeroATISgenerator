@@ -13,6 +13,8 @@ var qnh = "1013";
 
 var transitionLevel = "60";
 
+var airportName = "";
+
 var textPilotInstructions = "PING FOR EVERY TRANSMISSION";
 var pdcAvailable = "PDC NOT AVAILABLE";
 
@@ -32,7 +34,7 @@ document.getElementById("atisLetter").addEventListener("input", function () {
 });
 document.getElementById("time").addEventListener("input", function () {
     time = this.value.toUpperCase();
-    this.value = time; // fixed typo
+    this.value = time;
     updateAtis();
 });
 document.getElementById("departureRunway").addEventListener("input", function () {
@@ -82,13 +84,12 @@ document.getElementById("textPilotInstructions").addEventListener("input", funct
 });
 document.getElementById("pdc").addEventListener("change", function () {
     if (this.checked) {
-        pdcAvailable = "PDC AVAILABLE";
-        updateAtis();
+        pdcAvailable = "PDC AVAILABLE, THROUGHT DM'S";
     } else {
         pdcAvailable = "PDC NOT AVAILABLE";
-        updateAtis();
     }
 
+    updateAtis();
 });
 document.getElementById("serverCode").addEventListener("input", function () {
     serverCode = this.value.toUpperCase();
@@ -100,8 +101,18 @@ function safeString(value) {
     return value ? String(value) : " ";
 }
 
-function getAirportName(airportCode) {
-    return airportCode;
+function getAirportName(code) {
+    let foundAirport = null;
+
+    for (const region in airportData) {
+        foundAirport = airportData[region].find(airport => airport.icao === code);
+
+        if (foundAirport) {
+            break;
+        }
+    }
+
+    return foundAirport ? foundAirport.name.toUpperCase() : code;
 }
 
 function updateAtis() {
@@ -110,31 +121,26 @@ function updateAtis() {
         safeString(wind) + " " + safeString(visibility) + " " + safeString(cloudLayers) + " " + safeString(temp) + " " + safeString(qnh) + "\n" +
         "TRANSITION LEVEL " + safeString(transitionLevel) + "\n" +
         "ACKNOWLEDGE RECEIPT OF INFORMATION " + safeString(atisLetter) + "\n" +
-        "AND ADVISE AFCT TYPE ON FIRST CONTACT WITH " + safeString(airportCode) + "\n" +
+        "AND ADVISE AFCT TYPE ON FIRST CONTACT WITH " + getAirportName(airportCode) + "\n" +
         "TEXT PILOTS " + safeString(textPilotInstructions) + "|" + pdcAvailable + "\n" +
         "SERVER CODE " + safeString(serverCode);
 
-    // Use .value for a textarea
     document.getElementById("atisArea").value = atis;
 }
 
 function checkRequiredFields() {
-    // Get all the required fields
     const requiredFields = document.querySelectorAll(".values [required]");
     let allFilled = true;
 
-    // Loop through each required field and check if it's filled
     requiredFields.forEach(function (field) {
         if (!field.value) {
             allFilled = false;
-            // Optionally, you can highlight the empty field
             field.style.borderColor = "red"; // Highlight in red
         } else {
             field.style.borderColor = ""; // Reset border color
         }
     });
 
-    // Show an alert if any required field is empty
     if (!allFilled) {
         alert("Please fill in all required fields.");
     } else {

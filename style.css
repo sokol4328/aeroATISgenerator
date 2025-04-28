@@ -3,13 +3,21 @@ html{
     background-color: lightgray;
 }
 
+#header{
+    text-align: center;
+    padding: 20px;
+    padding-top: 5%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .startContainer{
     display: flex;
     width: 100%;
     overflow: hidden;
     column-gap: 20px;
     height: 50vh;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 .values{
@@ -20,6 +28,9 @@ html{
     display: grid;
     grid-template-columns: repeat(2, 50%);
     justify-content: center;
+    border-radius: 1%;
+    border-color: black;
+    border-style: solid;
 }
 
 .choice{
@@ -40,6 +51,9 @@ html{
 .results{
     background-color: lightblue;
     width: 45%;
+    border-radius: 1%;
+    border-color: black;
+    border-style: solid;
 }
 
 #atisArea{
@@ -47,6 +61,7 @@ html{
     height: 75%;
     margin-top: 10px;
     margin-left: 6.5%;
+    font-size: 17px;
 }
 
 #copyButton{
