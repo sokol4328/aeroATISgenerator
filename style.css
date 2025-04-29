@@ -5,26 +5,42 @@ html{
 #header{
     text-align: center;
     padding: 20px;
+    padding-top: 75px;
+    font-size: 30px;
+    font-weight: bold;
     color: white;
+    padding-bottom: 6%;
 }
 
 #mainContainer{
-    display: flex;
-    width: 90%;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 1200px;
+    height: 350px;
+
     overflow: hidden;
-    column-gap: 20px;
-    height: 40vh;
-    padding-top: 5%;
-    align-self: center;
-    margin: auto;
+    
+    padding-top: 25px;
     background-color: rgb(34, 34, 34);
-    border-radius: 20px;
+
+    border-radius: 10px;
+    border-color: darkgray;
+    border-style: solid;
+
+    max-width: 1100px;
 }
 
 .choiceButton{
-    width: 50%;
-    height: 50%;
-    margin: 5px;
+    width: 70%;
+    height: 40%;
+    margin-left: 10%;
     align-self: center;
     display: block;
     text-align: center;
@@ -35,4 +51,39 @@ html{
     border-style: solid;
     margin-bottom: 15%;
     font-size: 25px;
+    cursor: pointer;
+}
+
+#discord{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+    top: 50%;
+    right: 92%;
+
+    margin-left: 10%;
+    margin-top: 10%;
+
+    display: block;
+    cursor: pointer;
+}
+
+#discord:hover{
+    transform: scale(1.1);
+}
+
+#discordDiv{
+    position: absolute;
+    top: 38%;
+    right: 92.3%;
+
+    text-align: center;
+
+    margin-left: 10%;
+    margin-top: 10%;
+
+    display: block;
+    color: white;
+    font-size: 20px;
 }
