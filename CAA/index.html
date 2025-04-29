@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIS generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Important Stuff/functions.js" defer></script>
+    <script src="../Important Stuff/airportData.js" defer></script> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 id="header">CAA format ATIS generator</h1>
+    <div class="startContainer">
+        <div class="values">
+
+            <div class="choice">
+                <label for="airport">Airport</label>
+                <input type="text", id="airport" placeholder="EGOP" maxlength="4" required>
+            </div>
+
+            <div class="choice">
+                <label for="atisLetter">Atis letter</label>
+                <input type="text" id="atisLetter" maxlength="1" value="A" required>
+            </div>
+
+            <div class="choice">
+                <label for="time">Time in ZULU</label>
+                <input type="text" id="time" placeholder="1230" maxlength="4" required>
+            </div>
+
+            <div class="choice">
+                <label for="departureRunway">Departure Runway</label>
+                <input type="text" id="departureRunway" placeholder="30" maxlength="3" required>
+            </div>
+
+            <div class="choice">
+                <label for="arrivalRunway">Arrival Runway</label>
+                <input type="text" id="arrivalRunway" placeholder="30" maxlength="3" required>
+            </div>
+            
+            <div class="choice">
+                <label for="wind">Wind</label>
+                <input type="text" id="wind" placeholder="36010G60KT" maxlength="10" required>
+            </div>
+
+            <div class="choice">
+                <label for="visibility">Visibility</label>
+                <input type="text" id="visibility" placeholder="9999" maxlength="4" required>
+            </div>
+
+            <div class="choice">
+                <label for="cloudLayers">Cloud layers</label>
+                <input type="text" id="cloudLayers" placeholder="CLR" required>
+            </div>
+
+            <div class="choice">
+                <label for="temp">Temperature/dew point</label>
+                <input type="text" id="temp" placeholder="20/M01" maxlength="6" required>
+            </div>
+
+            <div class="choice">
+                <label for="qnh">QnH</label>
+                <input type="number" id="qnh" value="1013" required min="950" max="1050">
+            </div>
+
+            <div class="choice">
+                <label for="tl">Transition level</label>
+                <input type="number" id="tl" value="60" required min="50" max="85" step="5">
+            </div>
+
+            <div class="choice">
+                <label for="textPilotInstructions">Instructions for text pilots</label>
+                <input type="text" id="textPilotInstructions" value="PING FOR EVERY TRANSMISSION" required>
+            </div>
+
+            <div class="choice">
+                <label for="pdc">PDC available?</label>
+                <input type="checkbox" id="pdc" value=flase>
+            </div>
+
+            <div class="choice">
+                <label for="serverCode">SERVER CODE</label>
+                <input type="text" id="serverCode" placeholder="Server code" maxlength="6" required>
+            </div>
+
+        </div>
+        <div class="results">
+            <textarea name="atis" id="atisArea"></textarea>
+            <button id="copyButton" onclick="checkRequiredFields()">Copy ATIS</button>
+        </div>
+    </div>
+    <div id="menuContainer">
+        <button class="menuButton" id="menuButton" onclick="location.href = '../index.html'">Back to menu</button>
+    </div>
+</body>
+</html>
