@@ -16,7 +16,7 @@ html{
     display: flex;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: scroll;
     column-gap: 20px;
     height: 50vh;
     padding-top: 5%;
