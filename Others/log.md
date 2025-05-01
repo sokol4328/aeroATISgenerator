@@ -6,3 +6,8 @@ Added Aesir airports to the airportData.js file. Moved all the functions to a se
 New theme! Everything is now darker and much easier to use and not get blinded by white-cyan website.
 Added a main menu to later add links to other pages such as FAA and ICAO formats.
 Added a discord link cuz why not.
+
+01/05-25
+Added ICAO format thought its yet not functional.
+CAA fully done with all CAA airports in airportData.js wich means all names can be matched from ICAO codes.
+Also made a discord server: https://discord.gg/wjWA3YS2UC. Come and join!

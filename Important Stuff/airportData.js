@@ -219,6 +219,158 @@ const airportData = {
             ],
         },
     ],
+    Alavega: [
+        {
+            name: "Santa Mortica",
+            icao: "SCSM",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "121.500",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.900",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.100",
+                },
+                {
+                    type: "APP",
+                    frequency: "128.300",
+                },
+            ],
+            runways: ['08', '26'],
+            runwaySpecs: [
+                {
+                    id: '08/26',
+                    courses: '080/260',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Cantaloa International",
+            icao: "SCTL",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "118.900",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.850",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.350",
+                },
+            ],
+            runways: ['05L', '05R', '23L', '23R'],
+            runwaySpecs: [
+                {
+                    id: '05L/23R',
+                    courses: '049/231',
+                    length: 12500, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '05R/23L',
+                    courses: '049/231',
+                    length: 12500, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Grafoso",
+            icao: "SKGF",
+            stations: [
+                {
+                    type: "TWR",
+                    frequency: "118.350",
+                },
+            ],
+            runways: ['10', '28'],
+            runwaySpecs: [
+                {
+                    id: '10/28',
+                    courses: '100/280',
+                    length: 5340, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Fidalgueira",
+            icao: "SLGF",
+            stations: [
+            ],
+            runways: ['07', '25'],
+            runwaySpecs: [
+                {
+                    id: '07/25',
+                    courses: '067/247',
+                    length: "N/A", // feet,
+                    ils: false, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Kaieteur Regional",
+            icao: "SYKT",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.600",
+                },
+                {
+                    type: "TWR",
+                    frequency: "128.550",
+                },
+            ],
+            runways: ['18', '36'],
+            runwaySpecs: [
+                {
+                    id: '18/36',
+                    courses: '180/360',
+                    length: 4861, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Hipe International",
+            icao: "SYPH",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.700",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.300",
+                },
+            ],
+            runways: ['05', '23', '18', '36'],
+            runwaySpecs: [
+                {
+                    id: '05/23',
+                    courses: '045/225',
+                    length: 4994, // feet,
+                    ils: false, // whether runway has ils equipped
+                },
+                {
+                    id: '18/36',
+                    courses: '180/360',
+                    length: 9990, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+    ],
     avalon: [
         {
             name: "Manleigh",
@@ -254,7 +406,7 @@ const airportData = {
             stations: [
                 {
                     type: "TWR",
-                    frequency:"119.555",
+                    frequency: "119.555",
                 }
             ],
             runways: ['02', '20', '08', '26', '14', '32'],
@@ -280,8 +432,8 @@ const airportData = {
             ],
         },
         {
-            name:"Tarquay",
-            icao:"ATRQ",
+            name: "Tarquay",
+            icao: "ATRQ",
             stations: [
                 {
                     type: "TWR",
@@ -846,4 +998,177 @@ const airportData = {
             ],
         },
     ],
+    leovetsk : [
+        {
+            name: "Eisenhardt AFB",
+            icao: "CNAB",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "118.260",
+                },
+                {
+                    type: "TWR",
+                    frequency: "119.350",
+                },
+                {
+                    type: "APP",
+                    frequency: "121.445",
+                },
+                {
+                    type: "CTR",
+                    frequency: "132.100",
+                },
+            ],
+            runways: ['05', '23'],
+            runwaySpecs: [
+                {
+                    id: '05/23',
+                    courses: '056/236',
+                    length: 9180, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Leovetsk International",
+            icao: "ULIA",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "120.700",
+                },
+                {
+                    type: "TWR",
+                    frequency: "131.500",
+                },
+                {
+                    type: "APP",
+                    frequency: "119.300",
+                },
+                {
+                    type: "DEP",
+                    frequency: "120.400",
+                },
+                {
+                    type: "CTR",
+                    frequency: "132.100",
+                },
+            ],
+            runways: ['07L', '07C', '07R', '25L', '25C', '25R'],
+            runwaySpecs: [
+                {
+                    id: '07L/25R',
+                    courses: '070/250',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '07C/25C',
+                    courses: '070/250',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '07R/25L',
+                    courses: '070/250',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Novoaralsk AFB",
+            icao: "UNFB",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "119.420",
+                },
+                {
+                    type: "GND",
+                    frequency: "119.700",
+                },
+                {
+                    type: "TWR",
+                    frequency: "120.250",
+                },
+                {
+                    type: "CTR",
+                    frequency: "132.100",
+                },
+            ],
+            runways: ['10', '28'],
+            runwaySpecs: [
+                {
+                    id: '10/28',
+                    courses: '105/285',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+    ],
+    enoksen : [
+        {
+            name: "Oskufloi International",
+            icao: "BIOA",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "121.000",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.900",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.300",
+                },
+                {
+                    type: "APP",
+                    frequency: "119.300",
+                },
+            ],
+            runways: ['06', '24', '15', '33'],
+            runwaySpecs: [
+                {
+                    id: '06/24',
+                    courses: '065/245',
+                    length: 10020, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '15/33',
+                    courses: '155/335',
+                    length: 10056, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Enoksen Regional",
+            icao: "EKNO",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.705",
+                },
+                {
+                    type: "TWR",
+                    frequency: "120.600",
+                },
+            ],
+            runways: ['07', '25'],
+            runwaySpecs: [
+                {
+                    id: '07/25',
+                    courses: '070/250',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+    ]
 };
