@@ -22,10 +22,11 @@ html{
     grid-column: span 3;
     grid-template-columns: repeat(3, 1fr);
 
-    width: 90%;
+    width: 1200px;
     height: 350px;
 
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
     
     padding-top: 25px;
     background-color: rgb(34, 34, 34);

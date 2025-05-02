@@ -24,6 +24,10 @@ const airportData = {
                     type: "DEP",
                     frequency: "124.600",
                 },
+                {
+                    type: "CTR",
+                    frequency: "133.500",
+                },
             ],
             runways: ['09', '27', '03', '21'],
             runwaySpecs: [
@@ -56,6 +60,10 @@ const airportData = {
                 {
                     type: "TWR",
                     frequency: "119.925",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.500",
                 },
             ],
             runways: ['13', '31', '15', '33'],
@@ -101,6 +109,18 @@ const airportData = {
                 {
                     type: "2_TWR",
                     frequency: "118.700",
+                },
+                {
+                    type: "DEP",
+                    frequency: "128.800",
+                },
+                {
+                    type: "APP",
+                    frequency: "124.475",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.500",
                 },
             ],
             runways: ['07L', '25R', '07C', '25C', '07R', '25L', '16L', '34R', '16R', '34L'],
@@ -149,6 +169,10 @@ const airportData = {
                     type: "TWR",
                     frequency: "119.700",
                 },
+                {
+                    type: "CTR",
+                    frequency: "133.500",
+                },
             ],
             runways: ['14', '32'],
             runwaySpecs: [
@@ -173,6 +197,10 @@ const airportData = {
                     type: "TWR",
                     frequency: "119.600",
                 },
+                {
+                    type: "CTR",
+                    frequency: "133.500",
+                },
             ],
             runways: ['12', '30'],
             runwaySpecs: [
@@ -188,6 +216,10 @@ const airportData = {
             name: "Ryvinsk",
             icao: "EFTV",
             stations: [
+                {
+                    type: "CTR",
+                    frequency: "133.500",
+                },
             ],
             runways: ['12', '30'],
             runwaySpecs: [
@@ -206,6 +238,10 @@ const airportData = {
                 {
                     type: "TWR",
                     frequency: "128.500",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.500",
                 },
             ],
             runways: ['10', '28'],
@@ -240,6 +276,10 @@ const airportData = {
                     type: "APP",
                     frequency: "128.300",
                 },
+                {
+                    type: "CTR",
+                    frequency: "135.850",
+                },
             ],
             runways: ['08', '26'],
             runwaySpecs: [
@@ -267,6 +307,14 @@ const airportData = {
                     type: "TWR",
                     frequency: "118.350",
                 },
+                {
+                    type: "APP",
+                    frequency: "122.750",
+                },
+                {
+                    type: "CTR",
+                    frequency: "135.850",
+                },
             ],
             runways: ['05L', '05R', '23L', '23R'],
             runwaySpecs: [
@@ -292,6 +340,10 @@ const airportData = {
                     type: "TWR",
                     frequency: "118.350",
                 },
+                {
+                    type: "CTR",
+                    frequency: "135.850",
+                },
             ],
             runways: ['10', '28'],
             runwaySpecs: [
@@ -307,6 +359,10 @@ const airportData = {
             name: "Fidalgueira",
             icao: "SLGF",
             stations: [
+                {
+                    type: "CTR",
+                    frequency: "135.850",
+                },
             ],
             runways: ['07', '25'],
             runwaySpecs: [
@@ -330,6 +386,10 @@ const airportData = {
                     type: "TWR",
                     frequency: "128.550",
                 },
+                {
+                    type: "CTR",
+                    frequency: "135.850",
+                },
             ],
             runways: ['18', '36'],
             runwaySpecs: [
@@ -352,6 +412,10 @@ const airportData = {
                 {
                     type: "TWR",
                     frequency: "118.300",
+                },
+                {
+                    type: "CTR",
+                    frequency: "135.850",
                 },
             ],
             runways: ['05', '23', '18', '36'],
@@ -913,6 +977,10 @@ const airportData = {
                     type: "TWR",
                     frequency: "120.100",
                 },
+                {
+                    type: "APP",
+                    frequency: "128.975",
+                },
             ],
             runways: ['10', '28'],
             runwaySpecs: [
@@ -1170,5 +1238,149 @@ const airportData = {
                 },
             ],
         },
-    ]
+    ],
+    Kyokkou : [
+        {
+            name: "Meihua",
+            icao: "RCMH",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.900",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.100",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['02', '20'],
+            runwaySpecs: [
+                {
+                    id: '02/20',
+                    courses: '016/196',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Kashio",
+            icao: "RJKS",
+            stations: [
+                {
+                    type: "TWR",
+                    frequency: "121.900",
+                },
+                {
+                    type: "APP",
+                    frequency: "128.225",
+                },
+                {
+                    type: "DEP",
+                    frequency: "128.725",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['05', '23'],
+            runwaySpecs: [
+                {
+                    id: '05/23',
+                    courses: '045/225',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Umibutsu International",
+            icao: "RJUB",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "126.200",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.600",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.200",
+                },
+                {
+                    type: "APP",
+                    frequency: "119.200",
+                },
+                {
+                    type: "DEP",
+                    frequency: "125.000",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['06L', '06R', '24L', '24R'],
+            runwaySpecs: [
+                {
+                    id: '06L/24R',
+                    courses: '057/237',
+                    length: 11483, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '06R/24L',
+                    courses: '057/237',
+                    length: 13123, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Al Tak International",
+            icao: "VHAL",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "124.650",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.600",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.700",
+                },
+                {
+                    type: "APP",
+                    frequency: "123.800",
+                },
+                {
+                    type: "DEP",
+                    frequency: "119.500",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['18', '36'],
+            runwaySpecs: [
+                {
+                    id: '18/36',
+                    courses: '180/360',
+                    length: 11122, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+    ],
 };
