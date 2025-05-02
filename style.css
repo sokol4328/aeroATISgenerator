@@ -22,7 +22,7 @@ html{
     grid-column: span 3;
     grid-template-columns: repeat(3, 1fr);
 
-    width: 1200px;
+    width: 90%;
     height: 350px;
 
     overflow: hidden;
