@@ -615,6 +615,14 @@ const airportData = {
                     type: "W_TWR",
                     frequency: "118.705",
                 },
+                {
+                    type: "APP",
+                    frequency: "119.725",
+                },
+                {
+                    type: "N_CTR",
+                    frequency: "132.450",
+                },
             ],
             runways: ['03L', '21R', '03R', '21L'],
             runwaySpecs: [
@@ -644,6 +652,10 @@ const airportData = {
                 {
                     type: "TWR",
                     frequency: "118.080",
+                },
+                {
+                    type: "N_CTR",
+                    frequency: "132.450",
                 },
             ],
             runways: ['03', '21'],
@@ -1066,7 +1078,7 @@ const airportData = {
             ],
         },
     ],
-    leovetsk : [
+    leovetsk: [
         {
             name: "Eisenhardt AFB",
             icao: "CNAB",
@@ -1177,7 +1189,7 @@ const airportData = {
             ],
         },
     ],
-    enoksen : [
+    enoksen: [
         {
             name: "Oskufloi International",
             icao: "BIOA",
@@ -1239,7 +1251,7 @@ const airportData = {
             ],
         },
     ],
-    Kyokkou : [
+    Kyokkou: [
         {
             name: "Meihua",
             icao: "RCMH",
@@ -1382,5 +1394,874 @@ const airportData = {
                 },
             ],
         },
+        {
+            name: "Bilabaldi",
+            icao: "VNBA",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.900",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.100",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['02', '20'],
+            runwaySpecs: [
+                {
+                    id: '02/20',
+                    courses: '022/202',
+                    length: 10007, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Radang",
+            icao: "VTRD",
+            stations: [
+                {
+                    type: "TWR",
+                    frequency: "123.350",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['11', '29'],
+            runwaySpecs: [
+                {
+                    id: '11/29',
+                    courses: '110/290',
+                    length: 10000, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Suli",
+            icao: "VVSL",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "120.500",
+                },
+                {
+                    type: "GND",
+                    frequency: "129.125",
+                },
+                {
+                    type: "TWR",
+                    frequency: "131.175",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['14', '32'],
+            runwaySpecs: [
+                {
+                    id: '14/32',
+                    courses: '140/320',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Udyanapura International",
+            icao: "WSML",
+            stations: [
+                {
+                    type: "1_DEL",
+                    frequency: "119.600",
+                },
+                {
+                    type: "2_DEL",
+                    frequency: "119.600",
+                },
+                {
+                    type: "1_GND",
+                    frequency: "125.650",
+                },
+                {
+                    type: "2_GND",
+                    frequency: "122.550",
+                },
+                {
+                    type: "E_GND",
+                    frequency: "121.000",
+                },
+                {
+                    type: "1_TWR",
+                    frequency: "118.600",
+                },
+                {
+                    type: "2_TWR",
+                    frequency: "118.250",
+                },
+                {
+                    type: "3_TWR",
+                    frequency: "131.400",
+                },
+                {
+                    type: "APP",
+                    frequency: "120.300",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['18L', '18C', '18R', '36R', '36C', '36L'],
+            runwaySpecs: [
+                {
+                    id: '18L/36R',
+                    courses: '180/360',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '18C/36C',
+                    courses: '180/360',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '18R/36L',
+                    courses: '180/360',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Horomoto AFB",
+            icao: "ZBHM",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "125.330",
+                },
+                {
+                    type: "TWR",
+                    frequency: "125.520",
+                },
+                {
+                    type: "APP",
+                    frequency: "125.790",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['06L', '06R', '24R', '24L'],
+            runwaySpecs: [
+                {
+                    id: '06L/24R',
+                    courses: '059/239',
+                    length: 10627, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '06R/24L',
+                    courses: '059/239',
+                    length: 13280, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Yunzhou Beihai International",
+            icao: "ZBYN",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "121.875",
+                },
+                {
+                    type: "C_GND",
+                    frequency: "121.700",
+                },
+                {
+                    type: "W_GND",
+                    frequency: "121.625",
+                },
+                {
+                    type: "E_GND",
+                    frequency: "121.975",
+                },
+                {
+                    type: "W_TWR",
+                    frequency: "118.825",
+                },
+                {
+                    type: "E_TWR",
+                    frequency: "118.375",
+                },
+                {
+                    type: "W_APP",
+                    frequency: "119.925",
+                },
+                {
+                    type: "E_APP",
+                    frequency: "119.625",
+                },
+                {
+                    type: "DEP",
+                    frequency: "120.000",
+                },
+                {
+                    type: "CTR",
+                    frequency: "130.600",
+                },
+            ],
+            runways: ['09', '27', '16L', '16C', '16R', '34L', '34C', '34R'],
+            runwaySpecs: [
+                {
+                    id: '09/27',
+                    courses: '090/270',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '16L/34R',
+                    courses: '160/340',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '16C/34C',
+                    courses: '160/340',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '16R/34L',
+                    courses: '160/340',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
     ],
+    Oconia: [
+        {
+            name: "Clarence International",
+            icao: "KCIA",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "121.750",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.700",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.550",
+                },
+                {
+                    type: "APP",
+                    frequency: "137.700",
+                },
+                {
+                    type: "DEP",
+                    frequency: "130.200",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['09', '18', '27', '36'],
+            runwaySpecs: [
+                {
+                    id: '09/27',
+                    courses: '091/271',
+                    length: 7003, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '18/36',
+                    courses: '182/002',
+                    length: 7001, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Harden",
+            icao: "KHIA",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "135.350",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.800",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.300",
+                },
+                {
+                    type: "DEP",
+                    frequency: "119.450",
+                },
+                {
+                    type: "APP",
+                    frequency: "120.500",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['01', '04', '19', '22'],
+            runwaySpecs: [
+                {
+                    id: '01/19',
+                    courses: '010/190',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '04/22',
+                    courses: '040/220',
+                    length: "N/A", // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Kitesboro",
+            icao: "KKBI",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.800",
+                },
+                {
+                    type: "TWR",
+                    frequency: "119.450",
+                },
+                {
+                    type: "APP",
+                    frequency: "125.500",
+                },
+                {
+                    type: "DEP",
+                    frequency: "127.500",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['11', '29'],
+            runwaySpecs: [
+                {
+                    id: '11/29',
+                    courses: '114/294',
+                    length: 9280, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Kauwela Resort",
+            icao: "KKRA",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "121.300",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.900",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.700",
+                },
+                {
+                    type: "APP",
+                    frequency: "137.150",
+                },
+                {
+                    type: "DEP",
+                    frequency: "133.675",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['06', '24'],
+            runwaySpecs: [
+                {
+                    id: '06/24',
+                    courses: '060/240',
+                    length: 3684, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Lynwood AFB/ International",
+            icao: "KLAB",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "127.325",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.900",
+                },
+                {
+                    type: "TWR",
+                    frequency: "126.000",
+                },
+                {
+                    type: "APP",
+                    frequency: "119.300",
+                },
+                {
+                    type: "DEP",
+                    frequency: "120.700",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['09', '15', '27', '33',],
+            runwaySpecs: [
+                {
+                    id: '09/27',
+                    courses: '094/274',
+                    length: 9001, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '15/33',
+                    courses: '150/330',
+                    length: 7000, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Lynwood municipal",
+            icao: "KLMA",
+            stations: [
+                {
+                    type: "TWR",
+                    frequency: "131.200",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['02', '14', '20', '32'],
+            runwaySpecs: [
+                {
+                    id: '02/20',
+                    courses: '028/208',
+                    length: 2811, // feet,
+                    ils: false, // whether runway has ils equipped
+                },
+                {
+                    id: '14/32',
+                    courses: '141/321',
+                    length: 3645, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "New Englandtown Regional",
+            icao: "KNET",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.800",
+                },
+                {
+                    type: "TWR",
+                    frequency: "133.200",
+                },
+                {
+                    type: "APP",
+                    frequency: "124.900",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['06', '24'],
+            runwaySpecs: [
+                {
+                    id: '06/24',
+                    courses: '060/240',
+                    length: 4490, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Norman International",
+            icao: "KNIA",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.100",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.750",
+                },
+                {
+                    type: "APP",
+                    frequency: "125.050",
+                },
+                {
+                    type: "DEP",
+                    frequency: "125.900",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['02L', '02R', '09L', '09R', '20L', '20R', '27L', '27R'],
+            runwaySpecs: [
+                {
+                    id: '02L/20R',
+                    courses: '023/203',
+                    length: 9771, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '02R/20L',
+                    courses: '023/203',
+                    length: 8988, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '09L/27R',
+                    courses: '091/271',
+                    length: 10526, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '09R/27L',
+                    courses: '091/271',
+                    length: 14515, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Oconee Island",
+            icao: "KOIA",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "122.640",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.255",
+                },
+                {
+                    type: "APP",
+                    frequency: "137.700",
+                },
+                {
+                    type: "DEP",
+                    frequency: "130.200",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['05', '23'],
+            runwaySpecs: [
+                {
+                    id: '05/23',
+                    courses: '045/225',
+                    length: 3770, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Pembroke Plantation",
+            icao: "KPPA",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "128.300",
+                },
+                {
+                    type: "TWR",
+                    frequency: "129.250",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['07', '25'],
+            runwaySpecs: [
+                {
+                    id: '07/25',
+                    courses: '070/250',
+                    length: "N/A", // feet,
+                    ils: false, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Webley island",
+            icao: "MUWI",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.100",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.200",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['12', '30'],
+            runwaySpecs: [
+                {
+                    id: '12/30',
+                    courses: '118/298',
+                    length: 2100, // feet,
+                    ils: false, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Augustus Atoll",
+            icao: "NTAA",
+            stations: [
+                {
+                    type: "RADIO",
+                    frequency: "119.900",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['18', '36', '18W', '36W'],
+            runwaySpecs: [
+                {
+                    id: '18/36',
+                    courses: '180/360',
+                    length: 2030, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+                {
+                    id: '18W/36W',
+                    courses: '180/360',
+                    length: "N/A", // feet,
+                    ils: false, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "St. Baralku",
+            icao: "MUWI",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "121.200",
+                },
+                {
+                    type: "TWR",
+                    frequency: "115.200",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['09', '27'],
+            runwaySpecs: [
+                {
+                    id: '09/27',
+                    courses: '091/271',
+                    length: 2020, // feet,
+                    ils: false, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Castle Atoll",
+            icao: "NTCA",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "128.580",
+                },
+                {
+                    type: "TWR",
+                    frequency: "129.660",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['02', '20'],
+            runwaySpecs: [
+                {
+                    id: '02/20',
+                    courses: '020/200',
+                    length: 2230, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Rawaki",
+            icao: "NTRI",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "121.975",
+                },
+                {
+                    type: "GND",
+                    frequency: "121.900",
+                },
+                {
+                    type: "TWR",
+                    frequency: "118.300",
+                },
+                {
+                    type: "APP",
+                    frequency: "127.400",
+                },
+                {
+                    type: "DEP",
+                    frequency: "124.300",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['07W', '09', '25W', '27'],
+            runwaySpecs: [
+                {
+                    id: '07W/25W',
+                    courses: '076/256',
+                    length: 3480, // feet,
+                    ils: false, // whether runway has ils equipped
+                },
+                {
+                    id: '09/27',
+                    courses: '091/271',
+                    length: 6645, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Eagle Island",
+            icao: "PMEA",
+            stations: [
+                {
+                    type: "GND",
+                    frequency: "127.600",
+                },
+                {
+                    type: "TWR",
+                    frequency: "130.100",
+                },
+                {
+                    type: "APP",
+                    frequency: "119.450",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['01', '19'],
+            runwaySpecs: [
+                {
+                    id: '01/19',
+                    courses: '005/185',
+                    length: 5340, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+        {
+            name: "Fiskar",
+            icao: "UHFI",
+            stations: [
+                {
+                    type: "DEL",
+                    frequency: "120.500",
+                },
+                {
+                    type: "GND",
+                    frequency: "120.570",
+                },
+                {
+                    type: "TWR",
+                    frequency: "121.200",
+                },
+                {
+                    type: "APP",
+                    frequency: "127.700",
+                },
+                {
+                    type: "DEP",
+                    frequency: "127.400",
+                },
+                {
+                    type: "CTR",
+                    frequency: "133.600",
+                },
+            ],
+            runways: ['08', '26'],
+            runwaySpecs: [
+                {
+                    id: '08/26',
+                    courses: '081/261',
+                    length: 13123, // feet,
+                    ils: true, // whether runway has ils equipped
+                },
+            ],
+        },
+    ]
 };

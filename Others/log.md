@@ -11,3 +11,7 @@ Added a discord link cuz why not.
 Added ICAO format thought its yet not functional.
 CAA fully done with all CAA airports in airportData.js wich means all names can be matched from ICAO codes.
 Also made a discord server: https://discord.gg/wjWA3YS2UC. Come and join!
+
+04/05-25
+AirportData.js is now finally fully done.
+ICAO format is now officially released as it passed my own testing.
