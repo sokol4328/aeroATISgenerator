@@ -84,7 +84,7 @@ document.getElementById("textPilotInstructions").addEventListener("input", funct
 });
 document.getElementById("pdc").addEventListener("change", function () {
     if (this.checked) {
-        pdcAvailable = "PDC AVAILABLE, THROUGHT DM'S";
+        pdcAvailable = "PDC AVAILABLE, VIA <#1168852137355264130>";
     } else {
         pdcAvailable = "PDC NOT AVAILABLE";
     }

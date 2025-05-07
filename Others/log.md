@@ -22,3 +22,4 @@ Started of FAA format but gave up after my F#ING select element gone kabom and d
 07/05-25
 Fixed the First contact position drop-down issue but the frequency function dosn't work now.
 Finally done with all of the formats so this is finally version 1.0.0!
+V 1.0.1 Fixed the PDC thing for all formats to link the actuall channel.

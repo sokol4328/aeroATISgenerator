@@ -991,7 +991,7 @@ const airportData = {
                 },
                 {
                     type: "APP",
-                    frequency: "128.975",
+                    frequency: "129.270",
                 },
             ],
             runways: ['10', '28'],
