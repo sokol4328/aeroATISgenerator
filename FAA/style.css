@@ -1,9 +1,9 @@
-html{
+html {
     text-transform: uppercase;
-    background-color:rgb(19, 19, 19);
+    background-color: rgb(19, 19, 19);
 }
 
-#header{
+#header {
     text-align: center;
     padding: 20px;
     padding-top: 75px;
@@ -12,7 +12,7 @@ html{
     color: white;
 }
 
-.startContainer{
+.startContainer {
     display: flex;
     position: relative;
     width: 100%;
@@ -22,7 +22,7 @@ html{
     padding-top: 5%;
 }
 
-.values{
+.values {
     background-color: rgba(45, 45, 45, 1);
     width: 45%;
     margin-left: 2.5%;
@@ -37,13 +37,14 @@ html{
     overflow: auto;
 }
 
-.choice{
-    label{
+.choice {
+    label {
         display: block;
         margin: 5px;
         text-align: center;
     }
-    input{
+
+    input {
         width: 85%;
         margin: 5px;
         align-self: center;
@@ -54,7 +55,7 @@ html{
     }
 }
 
-.results{
+.results {
     background-color: rgba(45, 45, 45, 1);
     width: 45%;
     border-radius: 1%;
@@ -62,7 +63,7 @@ html{
     border-style: solid;
 }
 
-#atisArea{
+#atisArea {
     width: 85%;
     height: 75%;
     margin-top: 10px;
@@ -73,7 +74,7 @@ html{
     resize: none;
 }
 
-#copyButton{
+#copyButton {
     background-color: lightgray;
     border: 2px solid black;
     color: black;
@@ -89,14 +90,14 @@ html{
     margin-top: 10px;
 }
 
-#menuContainer{
+#menuContainer {
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
 }
 
-#menuButton{
+#menuButton {
     background-color: lightgray;
     border: 2px solid black;
     color: black;
@@ -105,4 +106,30 @@ html{
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.dropdown {
+    width: 85%;
+    margin: 5px;
+    align-self: center;
+    display: block;
+    text-align: center;
+    background-color: rgba(45, 45, 45, 1);
+    color: rgba(255, 255, 255, 0.745);
 }

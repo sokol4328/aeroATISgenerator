@@ -1,22 +1,25 @@
 var airportCode = "";
-var atisLetter = "A";
+var atisLetter = "";
 var time = "";
-
-var departureRunway = "";
-var arrivalRunway = "";
 
 var wind = "";
 var visibility = "";
-var cloudLayers = "";
+var clouds = "";
 var temp = "";
-var qnh = "1013";
+var altimeter = "";
 
-var transitionLevel = "60";
+var approachType = "";
+var arrivalRunway = "";
 
-var airportName = "";
+var departureRunway = "";
+
+var positionToContact = "";
+var positionToContactName = "";
+var frequency = "";
+var forWhat = "";
 
 var textPilotInstructions = "PING FOR EVERY TRANSMISSION";
-var pdcAvailable = "PDC NOT AVAILABLE";
+var pdcAvailable = "";
 
 var serverCode = "";
 
@@ -26,71 +29,89 @@ document.getElementById("airport").addEventListener("input", function () {
     airportCode = this.value.toUpperCase();
     this.value = airportCode;
     updateAtis();
+    getStationOptions(airportCode);
 });
+
 document.getElementById("atisLetter").addEventListener("input", function () {
     atisLetter = this.value.toUpperCase();
     this.value = atisLetter;
     updateAtis();
 });
+
 document.getElementById("time").addEventListener("input", function () {
     time = this.value.toUpperCase();
     this.value = time;
     updateAtis();
 });
-document.getElementById("departureRunway").addEventListener("input", function () {
-    departureRunway = this.value.toUpperCase();
-    this.value = departureRunway;
-    updateAtis();
-});
-document.getElementById("arrivalRunway").addEventListener("input", function () {
-    arrivalRunway = this.value.toUpperCase();
-    this.value = arrivalRunway;
-    updateAtis();
-});
+
 document.getElementById("wind").addEventListener("input", function () {
     wind = this.value.toUpperCase();
     this.value = wind;
     updateAtis();
 });
+
 document.getElementById("visibility").addEventListener("input", function () {
     visibility = this.value.toUpperCase();
     this.value = visibility;
     updateAtis();
 });
+
 document.getElementById("cloudLayers").addEventListener("input", function () {
-    cloudLayers = this.value.toUpperCase();
-    this.value = cloudLayers;
+    clouds = this.value.toUpperCase();
+    this.value = clouds;
     updateAtis();
 });
-document.getElementById("temp").addEventListener("input", function () {
+
+document.getElementById("temperature").addEventListener("input", function () {
     temp = this.value.toUpperCase();
     this.value = temp;
     updateAtis();
 });
-document.getElementById("qnh").addEventListener("input", function () {
-    qnh = this.value.toUpperCase();
-    this.value = qnh;
+
+document.getElementById("altimeter").addEventListener("input", function () {
+    altimeter = this.value.toUpperCase();
+    this.value = altimeter;
     updateAtis();
 });
-document.getElementById("tl").addEventListener("input", function () {
-    transitionLevel = this.value.toUpperCase();
-    this.value = transitionLevel;
+
+document.getElementById("approachType").addEventListener("input", function () {
+    approachType = this.value.toUpperCase();
+    this.value = approachType;
     updateAtis();
 });
+
+document.getElementById("arrivalRunway").addEventListener("input", function () {
+    arrivalRunway = this.value.toUpperCase();
+    this.value = arrivalRunway;
+    updateAtis();
+});
+
+document.getElementById("departureRunway").addEventListener("input", function () {
+    departureRunway = this.value.toUpperCase();
+    this.value = departureRunway;
+    updateAtis();
+});
+
+document.getElementById("positionToContact").addEventListener("change", function () {
+    positionToContact = this.value;
+    updateAtis();
+});
+
 document.getElementById("textPilotInstructions").addEventListener("input", function () {
     textPilotInstructions = this.value.toUpperCase();
     this.value = textPilotInstructions;
     updateAtis();
 });
+
 document.getElementById("pdc").addEventListener("change", function () {
     if (this.checked) {
         pdcAvailable = "PDC AVAILABLE, THROUGHT DM'S";
     } else {
         pdcAvailable = "PDC NOT AVAILABLE";
     }
-
     updateAtis();
 });
+
 document.getElementById("serverCode").addEventListener("input", function () {
     serverCode = this.value.toUpperCase();
     this.value = serverCode;
@@ -98,16 +119,34 @@ document.getElementById("serverCode").addEventListener("input", function () {
 });
 
 function updateAtis() {
-    var atis = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " TIME " + safeString(time) + "\n" +
-        "DEP RWY " + safeString(departureRunway) + " ARR RWY " + safeString(arrivalRunway) + " IN USE" + "\n" +
-        safeString(wind) + " " + safeString(visibility) + " " + safeString(cloudLayers) + " " + safeString(temp) + " " + safeString(qnh) + "\n" +
-        "TRANSITION LEVEL " + safeString(transitionLevel) + "\n" +
-        "ACKNOWLEDGE RECEIPT OF INFORMATION " + safeString(atisLetter) + "\n" +
-        "AND ADVISE AFCT TYPE ON FIRST CONTACT WITH " + getAirportName(airportCode) + "\n" +
-        "TEXT PILOTS " + safeString(textPilotInstructions) + "|" + pdcAvailable + "\n" +
-        "SERVER CODE " + safeString(serverCode);
+    var result = splitStationString(positionToContact)
 
-    document.getElementById("atisArea").value = atis;
+    positionToContactName = result.name
+    frequency = result.frequency
+
+    if (positionToContactName == "DEL")
+    {
+        forWhat = "CLNC"
+    } else {
+        forWhat = "CLNC AND TAXI INSTRUCTIONS"
+    };
+
+    const depRunwayLine = (departureRunway != "" && departureRunway !== arrivalRunway)
+  ? "DEP " + safeString(departureRunway) + "\n"
+  : "";
+
+    var atis1 = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " " + safeString(time) + "\n"
+    + safeString(wind) + " " + safeString(visibility) + " " + safeString(clouds) + " " + safeString(temp) + " " + safeString(altimeter) + "\n"
+    + safeString(approachType) + " APCH " + safeString(arrivalRunway) + " IN USE" + "\n"
+    + depRunwayLine
+    + "READBACK ALL RUNWAY HOLD SHORT INSTRUCTIONS" + "\n"
+    + "CONTACT " + safeString(positionToContactName) + " ON " + safeString(frequency) + " FOR " + safeString(forWhat) + "\n"
+    + safeString(textPilotInstructions) + " | " + safeString(pdcAvailable) + "\n"
+    + "SERVER CODE " + safeString(serverCode) + "\n"
+    + "...ADVIS YOU HAVE " + safeString(atisLetter);
+
+    document.getElementById("atisArea").value = atis1;
+    
 }
 
 /* [AIRPORT IDENTIFIER] ATIS INFO [ATIS LETTER] [TIME IN UTC]

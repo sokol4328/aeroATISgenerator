@@ -15,3 +15,10 @@ Also made a discord server: https://discord.gg/wjWA3YS2UC. Come and join!
 04/05-25
 AirportData.js is now finally fully done.
 ICAO format is now officially released as it passed my own testing.
+
+06/05-25
+Started of FAA format but gave up after my F#ING select element gone kabom and dosn't want to change values. Might fix that later.
+
+07/05-25
+Fixed the First contact position drop-down issue but the frequency function dosn't work now.
+Finally done with all of the formats so this is finally version 1.0.0!

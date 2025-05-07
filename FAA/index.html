@@ -10,67 +10,79 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 id="header">CAA format ATIS generator</h1>
+    <h1 id="header">FAA format ATIS generator</h1>
     <div class="startContainer">
         <div class="values">
 
             <div class="choice">
                 <label for="airport">Airport</label>
-                <input type="text", id="airport" placeholder="EGOP" maxlength="4" required>
+                <input type="text", id="airport" placeholder="KCIA" maxlength="4" required>
             </div>
 
             <div class="choice">
-                <label for="atisLetter">Atis letter</label>
-                <input type="text" id="atisLetter" maxlength="1" value="A" required>
+                <label for="atisLetter">Atis Info</label>
+                <input type="text", id="atisLetter" placeholder="A" maxlength="1" required>
             </div>
 
             <div class="choice">
-                <label for="time">Time in ZULU</label>
-                <input type="text" id="time" placeholder="1230" maxlength="4" required>
+                <label for="time">time in zulu</label>
+                <input type="text", id="time" placeholder="1230" maxlength="4" required>
             </div>
 
-            <div class="choice">
-                <label for="departureRunway">Departure Runway</label>
-                <input type="text" id="departureRunway" placeholder="30" maxlength="3" required>
-            </div>
-
-            <div class="choice">
-                <label for="arrivalRunway">Arrival Runway</label>
-                <input type="text" id="arrivalRunway" placeholder="30" maxlength="3" required>
-            </div>
-            
             <div class="choice">
                 <label for="wind">Wind</label>
-                <input type="text" id="wind" placeholder="36010G60KT" maxlength="10" required>
+                <input type="text", id="wind" placeholder="36001G90KT" required>
             </div>
 
             <div class="choice">
                 <label for="visibility">Visibility</label>
-                <input type="text" id="visibility" placeholder="9999" maxlength="4" required>
+                <input type="text", id="visibility" placeholder="9999" required>
             </div>
 
             <div class="choice">
-                <label for="cloudLayers">Cloud layers</label>
-                <input type="text" id="cloudLayers" placeholder="CLR" required>
+                <label for="cloudLayers">Cloud layer(s)</label>
+                <input type="text", id="cloudLayers" placeholder="CLR" required>
             </div>
 
             <div class="choice">
-                <label for="temp">Temperature/dew point</label>
-                <input type="text" id="temp" placeholder="20/M01" maxlength="6" required>
+                <label for="temperature">Temperature/dew point</label>
+                <input type="text", id="temperature" placeholder="10/M01" required>
             </div>
 
             <div class="choice">
-                <label for="qnh">QnH</label>
-                <input type="number" id="qnh" value="1013" required min="950" max="1050">
+                <label for="altimeter">altimeter</label>
+                <input type="number", id="altimeter" placeholder="29,91" required>
             </div>
 
             <div class="choice">
-                <label for="tl">Transition level</label>
-                <input type="number" id="tl" value="60" required min="50" max="85" step="5">
+                <label for="approachType">approach type</label>
+                <select id="approachType"  class="dropdown" required>
+                    <option value="" disabled selected>SELECT APPROACH</option>
+                    <option value="ILS">ILS</option>
+                    <option value="VISUAL">VISUAL</option>
+                    <option value="RNAV">RNAV</option>
+                    <option value="VOR">VOR</option>
+                </select>
             </div>
 
             <div class="choice">
-                <label for="textPilotInstructions">Instructions for text pilots</label>
+                <label for="arrivalRunway">Arrival runway</label>
+                <input type="text", id="arrivalRunway" placeholder="03" required>
+            </div>
+
+            <div class="choice">
+                <label for="departureRunway">Departure runway</label>
+                <input type="text", id="departureRunway" placeholder="03">
+            </div>
+
+            <div class="choice">
+                <label for="positionToContact">First contact position</label>
+                <select id="positionToContact" class="dropdown" required>
+                </select>
+            </div>
+
+            <div class="choice">
+                <label for="textPilotInstructions">Text Pilot Instructions</label>
                 <input type="text" id="textPilotInstructions" value="PING FOR EVERY TRANSMISSION" required>
             </div>
 
@@ -83,10 +95,11 @@
                 <label for="serverCode">SERVER CODE</label>
                 <input type="text" id="serverCode" placeholder="Server code" maxlength="6" required>
             </div>
+            
 
         </div>
         <div class="results">
-            <textarea name="atis" id="atisArea"></textarea>
+            <textarea name="atis" id="atisArea" readonly></textarea>
             <button id="copyButton" onclick="checkRequiredFields()">Copy ATIS</button>
         </div>
     </div>
