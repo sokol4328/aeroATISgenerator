@@ -136,7 +136,7 @@ function updateAtis() {
   : "";
 
     var atis1 = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " " + safeString(time) + "\n"
-    + safeString(wind) + " " + safeString(visibility) + " " + safeString(clouds) + " " + safeString(temp) + " " + safeString(altimeter) + "\n"
+    + safeString(wind) + " " + safeString(visibility) + " " + safeString(clouds) + " " + safeString(temp) + " " + safeString(altimeter) + " inHg \n"
     + safeString(approachType) + " APCH " + safeString(arrivalRunway) + " IN USE" + "\n"
     + depRunwayLine
     + "READBACK ALL RUNWAY HOLD SHORT INSTRUCTIONS" + "\n"

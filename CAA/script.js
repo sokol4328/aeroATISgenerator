@@ -100,7 +100,7 @@ document.getElementById("serverCode").addEventListener("input", function () {
 function updateAtis() {
     var atis = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " TIME " + safeString(time) + "\n" +
         "DEP RWY " + safeString(departureRunway) + " ARR RWY " + safeString(arrivalRunway) + " IN USE" + "\n" +
-        safeString(wind) + " " + safeString(visibility) + " " + safeString(cloudLayers) + " " + safeString(temp) + " " + safeString(qnh) + "\n" +
+        safeString(wind) + " " + safeString(visibility) + " " + safeString(cloudLayers) + " " + safeString(temp) + " " + safeString(qnh) + " HPA \n" +
         "TRANSITION LEVEL " + safeString(transitionLevel) + "\n" +
         "ACKNOWLEDGE RECEIPT OF INFORMATION " + safeString(atisLetter) + "\n" +
         "AND ADVISE AFCT TYPE ON FIRST CONTACT WITH " + getAirportName(airportCode) + "\n" +

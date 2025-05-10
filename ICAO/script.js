@@ -105,7 +105,7 @@ function updateAtis() {
     var atis = safeString(airportCode) + " ATIS " + safeString(atisLetter) + " " + safeString(time) + "\n" +
         "DEPARTURES " + safeString(departureRunway) + ". ARRIVALS " + safeString(arrivalRunway)  + "\n" +
         "EXP " + safeString(expectApproach) + " APCH.\n" +
-        safeString(wind) + " VIS " + safeString(visibility) + " CLD " + safeString(cloudLayers) + " T" + safeString(temperature) + " D" + safeString(dewPoint) + " QNH "+ safeString(qnh) + "\n" +
+        safeString(wind) + " VIS " + safeString(visibility) + " CLD " + safeString(cloudLayers) + " T" + safeString(temperature) + " DP" + safeString(dewPoint) + " QNH "+ safeString(qnh) + " HPA \n" +
         "TEXT PILOTS " + safeString(textPilotInstructions) + "|" + pdcAvailable + "\n" +
         "SERVER CODE " + safeString(serverCode) + "\n" +
         "ACKNOWLEDGE INFO " + safeString(atisLetter) + " ON FIRST CTC WITH APP OR DEL";
