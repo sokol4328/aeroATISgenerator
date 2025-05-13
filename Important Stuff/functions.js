@@ -81,3 +81,27 @@ function splitStationString(input) {
     return { name: trimmedInput, frequency: "Hehe" };
   }
 }
+
+function getRoundedUtcTime() {
+    const now = new Date();
+
+    // Get current UTC hours and minutes
+    const utcHours = now.getUTCHours();
+    const utcMinutes = now.getUTCMinutes();
+
+    // Round to nearest 5-minute mark
+    const roundedMinutes = Math.round(utcMinutes / 5) * 5;
+
+    // Adjust if rounding goes to 60
+    let finalHours = utcHours;
+    let finalMinutes = roundedMinutes;
+    if (roundedMinutes === 60) {
+        finalMinutes = 0;
+        finalHours = (utcHours + 1) % 24;
+    }
+
+    // Format as HH:MM
+    const pad = (n) => n.toString().padStart(2, '0');
+    return `${pad(finalHours)}:${pad(finalMinutes)}`;
+    
+}

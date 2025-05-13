@@ -23,3 +23,12 @@ Started of FAA format but gave up after my F#ING select element gone kabom and d
 Fixed the First contact position drop-down issue but the frequency function dosn't work now.
 Finally done with all of the formats so this is finally version 1.0.0!
 V 1.0.1 Fixed the PDC thing for all formats to link the actuall channel.
+
+10/05-25
+V 1.0.2
+Thanks to all of the training evaluators in the discord server I fixed some issues that i didn't realise I had. Always nice to get someone to test your code
+
+13/05-25
+V 1.0.3
+Added "Runway in use" in CAA format if only one runway is active based on ArrivalRunway property
+Added a function to automaticly get and display UTC time in the Time field in all formats

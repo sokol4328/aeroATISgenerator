@@ -1,6 +1,7 @@
 var airportCode = "";
 var atisLetter = "A";
-var time = "";
+var time = getRoundedUtcTime();
+document.getElementById("time").value = time;
 
 var departureRunway = "";
 var arrivalRunway = "";
@@ -100,9 +101,12 @@ document.getElementById("serverCode").addEventListener("input", function () {
 });
 
 function updateAtis() {
+    time = getRoundedUtcTime();
+    document.getElementById("time").value = time;
+
     temperature = getSubstringBeforeSlash(temp);
     dewPoint = getSubstringAfterSlash(temp);
-    var atis = safeString(airportCode) + " ATIS " + safeString(atisLetter) + " " + safeString(time) + "\n" +
+    var atis = safeString(airportCode) + " ATIS " + safeString(atisLetter) + " " + safeString(time) + "z \n" +
         "DEPARTURES " + safeString(departureRunway) + ". ARRIVALS " + safeString(arrivalRunway)  + "\n" +
         "EXP " + safeString(expectApproach) + " APCH.\n" +
         safeString(wind) + " VIS " + safeString(visibility) + " CLD " + safeString(cloudLayers) + " T" + safeString(temperature) + " DP" + safeString(dewPoint) + " QNH "+ safeString(qnh) + " HPA \n" +

@@ -1,6 +1,7 @@
 var airportCode = "";
 var atisLetter = "A";
-var time = "";
+var time = getRoundedUtcTime();
+document.getElementById("time").value = time;
 
 var departureRunway = "";
 var arrivalRunway = "";
@@ -98,8 +99,15 @@ document.getElementById("serverCode").addEventListener("input", function () {
 });
 
 function updateAtis() {
-    var atis = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " TIME " + safeString(time) + "\n" +
-        "DEP RWY " + safeString(departureRunway) + " ARR RWY " + safeString(arrivalRunway) + " IN USE" + "\n" +
+    time = getRoundedUtcTime();
+    document.getElementById("time").value = time;
+
+    const depRunwayLine = (departureRunway != "" && departureRunway !== arrivalRunway)
+  ? "DEP RWY " + safeString(departureRunway) + " ARR RWY " + safeString(arrivalRunway) + " IN USE" + "\n"
+  : "RWY " + safeString(arrivalRunwayRunway) + " IN USE" + "\n";
+
+    var atis = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " TIME " + safeString(time) + "z \n" +
+        depRunwayLine +
         safeString(wind) + " " + safeString(visibility) + " " + safeString(cloudLayers) + " " + safeString(temp) + " " + safeString(qnh) + " HPA \n" +
         "TRANSITION LEVEL " + safeString(transitionLevel) + "\n" +
         "ACKNOWLEDGE RECEIPT OF INFORMATION " + safeString(atisLetter) + "\n" +

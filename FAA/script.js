@@ -1,6 +1,7 @@
 var airportCode = "";
 var atisLetter = "";
-var time = "";
+var time = getRoundedUtcTime();
+document.getElementById("time").value = time;
 
 var wind = "";
 var visibility = "";
@@ -119,6 +120,9 @@ document.getElementById("serverCode").addEventListener("input", function () {
 });
 
 function updateAtis() {
+    time = getRoundedUtcTime();
+    document.getElementById("time").value = time;
+
     var result = splitStationString(positionToContact)
 
     positionToContactName = result.name
@@ -135,7 +139,7 @@ function updateAtis() {
   ? "DEP " + safeString(departureRunway) + "\n"
   : "";
 
-    var atis1 = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " " + safeString(time) + "\n"
+    var atis1 = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " " + safeString(time) + "z \n"
     + safeString(wind) + " " + safeString(visibility) + " " + safeString(clouds) + " " + safeString(temp) + " " + safeString(altimeter) + " inHg \n"
     + safeString(approachType) + " APCH " + safeString(arrivalRunway) + " IN USE" + "\n"
     + depRunwayLine
