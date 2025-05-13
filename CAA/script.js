@@ -104,7 +104,7 @@ function updateAtis() {
 
     const depRunwayLine = (departureRunway != "" && departureRunway !== arrivalRunway)
   ? "DEP RWY " + safeString(departureRunway) + " ARR RWY " + safeString(arrivalRunway) + " IN USE" + "\n"
-  : "RWY " + safeString(arrivalRunwayRunway) + " IN USE" + "\n";
+  : "RWY " + safeString(arrivalRunway) + " IN USE" + "\n";
 
     var atis = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " TIME " + safeString(time) + "z \n" +
         depRunwayLine +
