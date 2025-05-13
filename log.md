@@ -27,3 +27,8 @@ V 1.0.1 Fixed the PDC thing for all formats to link the actuall channel.
 10/05-25
 V 1.0.2
 Thanks to all of the training evaluators in the discord server I fixed some issues that i didn't realise I had. Always nice to get someone to test your code
+
+13/05-25
+V 1.0.3
+Added "Runway in use" in CAA format if only one runway is active based on ArrivalRunway property
+Added a function to automaticly get and display UTC time in the Time field in all formats
