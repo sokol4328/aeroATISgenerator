@@ -1006,7 +1006,7 @@ const airportData = {
         },
         {
             name: "Seilam",
-            icao: "LISA",
+            icao: "LESA",
             stations: [
                 {
                     type: "DEL",

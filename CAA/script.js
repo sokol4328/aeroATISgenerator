@@ -102,9 +102,10 @@ function updateAtis() {
     time = getRoundedUtcTime();
     document.getElementById("time").value = time;
 
-    const depRunwayLine = (departureRunway != "" && departureRunway !== arrivalRunway)
-  ? "DEP RWY " + safeString(departureRunway) + " ARR RWY " + safeString(arrivalRunway) + " IN USE" + "\n"
-  : "RWY " + safeString(arrivalRunway) + " IN USE" + "\n";
+    const depRunwayLine = (arrivalRunway === "" || departureRunway === arrivalRunway)
+        ? "RWY " + safeString(departureRunway) + " IN USE" + "\n"
+        : "DEP RWY " + safeString(departureRunway) + " ARR RWY " + safeString(arrivalRunway) + " IN USE" + "\n";
+
 
     var atis = safeString(airportCode) + " ATIS INFO " + safeString(atisLetter) + " TIME " + safeString(time) + "z \n" +
         depRunwayLine +

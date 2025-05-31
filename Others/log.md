@@ -32,3 +32,8 @@ Thanks to all of the training evaluators in the discord server I fixed some issu
 V 1.0.3
 Added "Runway in use" in CAA format if only one runway is active based on ArrivalRunway property
 Added a function to automaticly get and display UTC time in the Time field in all formats
+
+31/05-25
+V 1.0.4
+LISA is apparantly LESA now so yeah enjoy i guess
+Arrival runway is now not required in the CAA version
